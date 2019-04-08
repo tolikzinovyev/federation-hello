@@ -4,7 +4,7 @@ Make sure that [Bazel is installed](https://docs.bazel.build/versions/master/ins
 on your system.
 
 
-## Get this code onto your system
+## Get federation-hello code onto your system
 
 ```bash
 $git clone <this repo>
