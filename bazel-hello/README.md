@@ -1,4 +1,4 @@
-#  Bazel Quick Start #
+#  Bazel Federation Quick Start #
 
 Make sure that [Bazel is installed](https://docs.bazel.build/versions/master/install.html)
 on your system.
