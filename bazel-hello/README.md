@@ -1,10 +1,10 @@
-#  Bazel Quick Start #
+#  Bazel Federation Quick Start #
 
 Make sure that [Bazel is installed](https://docs.bazel.build/versions/master/install.html)
 on your system.
 
 
-## Get this code onto your system
+## Get federation-hello code onto your system
 
 ```bash
 $git clone <this repo>
@@ -12,7 +12,12 @@ $git clone <this repo>
 
 ```
 
-## Get the latest copy of the Federation WORKSPACE and save it as your project's WORKPACE
+## Create you project's WORKSPACE
+
+### Option 1 - Use provided WORKSPACE as an example
+
+
+### Option 2 - Get the latest copy of the Federation WORKSPACE and save it as your project's WORKPACE
 ```bash
 curl https://raw.githubusercontent.com/abseil/federation-head/master/WORKSPACE >> WORKSPACE
 ```
