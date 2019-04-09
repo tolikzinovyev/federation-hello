@@ -16,6 +16,7 @@ $git clone <this repo>
 
 ### Option 1 - Use provided WORKSPACE as an example
 
+Nothing to do, you can [build and run the tests](#build-and-run-the-tests)
 
 ### Option 2 - Get the latest copy of the Federation WORKSPACE and save it as your project's WORKPACE
 ```bash
