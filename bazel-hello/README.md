@@ -20,7 +20,7 @@ Nothing to do, you can [build and run the tests](#build-and-run-the-tests)
 
 ### Option 2 - Get the latest copy of the Federation WORKSPACE and save it as your project's WORKPACE
 ```bash
-curl https://raw.githubusercontent.com/abseil/federation-head/master/WORKSPACE >> WORKSPACE
+curl https://raw.githubusercontent.com/abseil/federation-head/master/WORKSPACE > WORKSPACE
 ```
 ### Windows Note
 The example above assumes that curl is already installed on your system.
