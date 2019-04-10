@@ -14,14 +14,10 @@ $git clone <this repo>
 
 ## Create you project's WORKSPACE
 
-### Option 1 - Use provided WORKSPACE as an example
+### Use provided WORKSPACE as an example
 
 Nothing to do, you can [build and run the tests](#build-and-run-the-tests)
 
-### Option 2 - Get the latest copy of the Federation WORKSPACE and save it as your project's WORKPACE
-```bash
-curl https://raw.githubusercontent.com/abseil/federation-head/master/WORKSPACE > WORKSPACE
-```
 ### Windows Note
 The example above assumes that curl is already installed on your system.
 * If you are on Windows 10, version 1803 or later, your OS ships with a copy of
