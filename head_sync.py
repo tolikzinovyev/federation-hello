@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 '''
 This script uses GitHub API to construct http_archive element to be inserted
 into a federation client projects bazel WORKSPACE
@@ -6,7 +6,6 @@ into a federation client projects bazel WORKSPACE
 import hashlib
 import json
 import urllib3
-urllib3.disable_warnings()
 
 HTTP_ARCHIVE_TEMPLATE = """http_archive(
   name = "{}",
@@ -31,7 +30,7 @@ class GitHubProject(ExternalDependency):
 
   def workspace_rule(self):
     # https://developer.github.com/v3/repos/commits/
-    request = http.request(
+    request = http.request(verify=False,
         'GET', 'https://api.github.com/repos/{}/{}/commits'.format(
             project.owner, project.repo),
         headers = { 'User-Agent': 'Workspace Updater' })
@@ -49,7 +48,7 @@ class GitHubProject(ExternalDependency):
 
 PROJECTS = [
     GitHubProject('com_google_absl_oss_federation',
-        'abseil', 'federation-head'),
+      'abseil', 'federation-head'),
 ]
 
 for project in PROJECTS:
