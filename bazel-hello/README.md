@@ -13,25 +13,25 @@ $git clone <this repo>
 ```
 
 ## Create you project's WORKSPACE
+### Step 0: Make sure that python is installed and avaiable on your system
 
-### Use provided WORKSPACE as an example
-
-Nothing to do, you can [build and run the tests](#build-and-run-the-tests)
-
-### Windows Note
-The example above assumes that curl is already installed on your system.
-* If you are on Windows 10, version 1803 or later, your OS ships with a copy of
-curl, already set up and ready to use.
-* If you have Git for Windows installed if you downloaded Git from git-scm.com
-you have curl.exe under: C:\Program Files\Git\mingw64\bin\ - Simply add the
-above path to PATH or call curl explicitly
+### Step 1: Run head_sync.py to get the latest head 
+The script will run and output the latest state of the federation head
 ```bash
-"C:\Program Files\Git\mingw64\bin\curl" https://raw.githubusercontent.com/abseil/federation-head/master/WORKSPACE >> WORKSPACE
+federation-hello (master)$ ./head_sync.py
+...
+...
+********** INSERT THIS INTO YOUR WORKSPACE: *****************
+http_archive(
+  name = "com_google_absl_oss_federation",
+  urls = ["https://github.com/abseil/federation-head/archive/f51f2c275b4b521ad4fa7f1c9143717bd264f400.zip"],  # 2019-04-09T17:26:54Z
+  strip_prefix = "federation-head-f51f2c275b4b521ad4fa7f1c9143717bd264f400",
+  sha256 = "9c51108ef9a4b5b6f48f2395d01f1785e5ce80a8816da9ca9e344f100cba62c4",
+)
+*********************************
 ```
-If you are not sure how to install curl on windows
-[this StackOverflow](https://stackoverflow.com/questions/9507353/how-do-i-install-and-use-curl-on-windows) answer
-might be helpful
 
+### Step 2: Insert latest federation-head reference into your WORKSPACE
 
 ## Build and run the tests
 
