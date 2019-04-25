@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 '''
 This script uses GitHub API to construct http_archive element to be inserted
 into a federation client projects bazel WORKSPACE
@@ -6,6 +6,7 @@ into a federation client projects bazel WORKSPACE
 import hashlib
 import json
 import urllib3
+urllib3.disable_warnings()
 
 HTTP_ARCHIVE_TEMPLATE = """http_archive(
   name = "{}",
