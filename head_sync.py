@@ -30,7 +30,7 @@ class GitHubProject(ExternalDependency):
 
   def workspace_rule(self):
     # https://developer.github.com/v3/repos/commits/
-    request = http.request(verify=False,
+    request = http.request(
         'GET', 'https://api.github.com/repos/{}/{}/commits'.format(
             project.owner, project.repo),
         headers = { 'User-Agent': 'Workspace Updater' })
