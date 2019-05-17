@@ -15,9 +15,13 @@ $git clone <this repo>
 ## Create or update your project's WORKSPACE
 Ultimately your client project needs to reference Abseil Federation HEAD which in turn will make federation_deps() function call available. The federation_deps() is a convenient way to access a version of [federation_head.bzl](https://github.com/abseil/federation-head/blob/master/federation_deps.bzl) that your project depends upon.
 
+Your WORKSPACE needs to start with http_archive definition
+```
+load("@com_google_absl_oss_federation//:federation_deps.bzl", "federation_deps")
+```
 
-So in your WORKSPACE first this definition is needed, to define "com_google_absl_oss_federation"
-For example:
+After that your WORKSPACE needs to define "com_google_absl_oss_federation"
+
 ```
 http_archive(
   name = "com_google_absl_oss_federation",
@@ -29,10 +33,13 @@ http_archive(
 After com_google_absl_oss_federation has been defined we load 
 ```
 load("@com_google_absl_oss_federation//:federation_deps.bzl", "federation_deps")
+load("@com_google_absl_oss_federation//:federation_deps.bzl", "cc_deps")
+
 ```
 ... And Call
 ```
 federation_deps()
+cc_deps()
 ```
 
 ### Convenience script. We provide a script head_sync.py for convenience. 
