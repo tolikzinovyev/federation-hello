@@ -13,11 +13,12 @@
 // limitations under the License.
 
 #include <string>
-
 #include "absl/strings/string_view.h"
 
 namespace hello {
 
 std::string Greet(absl::string_view person);
+
+std::string zCompress(std::string str_in );
 
 }  // namespace hello

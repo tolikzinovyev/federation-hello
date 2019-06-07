@@ -18,13 +18,11 @@
 
 #include "gtest/gtest.h"
 
-namespace hello {
 namespace {
 
 TEST(Greeter, Works) {
-  EXPECT_EQ("Hello tester", Greet("tester"));
+  EXPECT_EQ("Hello tester", hello::Greet("tester"));
 }
 
-}  // namespace 
-}  // namespace hello
+}  // namespace
 

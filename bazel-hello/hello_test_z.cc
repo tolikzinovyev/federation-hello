@@ -13,9 +13,21 @@
 // limitations under the License.
 
 #include "hello.h"
-#include <iostream>
 
-int main(int argc, const char** argv) {
-  std::cout << hello::Greet(argc < 2 ? "world" : argv[1]) << std::endl;
-  return 0;
+#include <string>
+
+#include "gtest/gtest.h"
+
+namespace {
+
+TEST(Compressor, Compresses) {
+  std::string compressed_string = hello::zCompress(
+      "Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello");
+  EXPECT_EQ(12, compressed_string.length());
 }
+}
+
+
+
+
+
