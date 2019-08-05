@@ -1,10 +1,11 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+
 http_archive(
   name = "com_google_absl_oss_federation",
-  urls = ["https://github.com/abseil/federation-head/archive/c8f13413902980522b07ef4893c7d88342edd8e7.zip"],  # 2019-06-07T15:02:25Z
-  strip_prefix = "federation-head-c8f13413902980522b07ef4893c7d88342edd8e7",
-  sha256 = "5b56b4957412935f0ba59c6cb384d2aedddf06237d4cb91c18b4ba5fc98fb33f",
+  urls = ["https://github.com/abseil/federation-head/archive/ba607b09a3c187abe0ebdcfa54dd76306762bc6f.zip"],  # 2019-08-05T19:51:58Z
+  strip_prefix = "federation-head-ba607b09a3c187abe0ebdcfa54dd76306762bc6f",
+  sha256 = "8d7fa51c89aa0d130902f68bef6ac516ac920bf4c0b986cb130d3eab48ab5572",
 )
 
 load("@com_google_absl_oss_federation//:federation_deps.bzl", "federation_deps")
