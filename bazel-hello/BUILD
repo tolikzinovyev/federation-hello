@@ -48,4 +48,5 @@ cc_binary(
         ":hello",
         "@net_zlib//:zlib",
     ],
+    malloc = "@com_github_google_tcmalloc//tcmalloc",
 )
